@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type="text/css" href="css/todo.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div id = "todo_box">
+        <div id = "heading"><h1>TODO APP</h1></div>
+        <div id = "input_form">
+
+            <div id = "discription_box" >
+                <label for = "discription" class="select_option">Discription</label>
+                <input class = "select_option" type = "text" name="work" id = "discription" placeholder="What i will need to remind you?">
+            </div>
+            <div id = "category" class="selection">
+                <label for = "type" class="select_option">Select Category</label>
+                <select id = "type" class="select_option">
+                    
+                    <option>School</option>
+                    <option>Home</option>
+                    <option>Personol</option>
+                    <option>Office</option>
+                </select>
+                
+            </div>
+            <div id = "input_date" class="selection">
+                <label for = "due_date" class="select_option">Due date</label>
+                <input type="date" name = "date" id = "due_date" class="select_option">
+            </div>
+        </div>
+        <div id = "input_btn">
+            <button></button>
+            <button></button>
+        </div>
+                    
+        <!-- <div style="height: 40%; width:100%; border: 1px solid black;"></div>
+        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
+        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
+        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
+        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
+        <div style="height: 40%; width:100%; border: 1px solid black;"></div> -->
+    </div>
+    
+    
+<script src="js/todo.js"> </script>
+</body>
+</html>
