@@ -34,25 +34,28 @@
             </div>
         </div>
         <div id = "input_btn">
-            <button><span><i class="fa-regular fa-plus"></i></span></button>
-            <button><span><i class="fa-solid fa-trash"></i></span></button>
+            <button id = "addBtn" type="submit"><span><i class="fa-regular fa-plus"></i>&nbsp ADD</span></button>
+            <button id = "deleteBtn" type=""><span><i class="fa-solid fa-trash"></i>&nbsp DELETE</span></button>
+            
         </div>
-                    
+             
+        
+        <% for(let i of task){ %>
         <div id = "tasks">
             <div id = "cb">
                 <input type="checkbox">
             </div>
             <div id = "due_work">
                 <div id = "due_task">
-                    <p>why not add task</p>
+                    <p><%= i.discription %> </p>
                     <span><i class="fa-solid fa-calendar-days"></i>&nbsp may 2, 2022</span>
                 </div>
                 <div id = "due_cat">
-                    <div><p>school</p></div>
+                    <div><p><%= i.category %></p></div>
                 </div>
             </div>
         </div>
-
+        <% } %>
     </div>
     
     

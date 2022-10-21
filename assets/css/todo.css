@@ -3,18 +3,22 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: lightslategray;
     
 }
 #todo_box{
     height: 80vh;
+    
     /* max-height: auto; */
     width: 80vh;
     /* border: 2px solid black; */
     margin-top: 10vh;
     /* margin-left: 32vw; */
+    background-color: white;
+    
 }
 #heading{
-    border: 1px solid black;
+    border-bottom: 2px solid black;
     height: 10%;
     width: 100%;
 }
@@ -33,7 +37,7 @@ body{
 #discription_box{
     height: 50%;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,11 +45,13 @@ body{
 .selection{
     height: 50%;
     width: 50%;
-    /* border: 1px solid black; */
+    box-sizing: border-box;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
    
 }
 #input_btn{
@@ -69,15 +75,17 @@ body{
     /* border: 1px solid black; */
 }
 #tasks{
-    height: 15%;
+     min-height: 15%;
+    height: auto; 
+    /* height: 15%; */
     width: 100%;
     border-top: 1px solid black;
     display: flex;
     flex-direction: row;
 }
 #cb{
-    height: 100%;
-    width: 10%;
+    height: 85px;
+    width: 57px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,10 +109,11 @@ body{
 }
 #due_task p{
     margin-top: 10px;
+    overflow-wrap: break-word;
 }
 #due_cat{
-    height: 100%;
-    width: 20%;
+    height: 85px;
+    width: 102px;
     /* background-color: orangered; */
     display: flex;
     align-items: center;
