@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" type="text/css" href="css/todo.css">
+    <script src="https://kit.fontawesome.com/5c90de5687.js" crossorigin="anonymous"></script>
     <title><%= title %></title>
 </head>
 <body>
@@ -33,16 +34,25 @@
             </div>
         </div>
         <div id = "input_btn">
-            <button></button>
-            <button></button>
+            <button><span><i class="fa-regular fa-plus"></i></span></button>
+            <button><span><i class="fa-solid fa-trash"></i></span></button>
         </div>
                     
-        <!-- <div style="height: 40%; width:100%; border: 1px solid black;"></div>
-        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
-        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
-        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
-        <div style="height: 40%; width:100%; border: 1px solid black;"></div>
-        <div style="height: 40%; width:100%; border: 1px solid black;"></div> -->
+        <div id = "tasks">
+            <div id = "cb">
+                <input type="checkbox">
+            </div>
+            <div id = "due_work">
+                <div id = "due_task">
+                    <p>why not add task</p>
+                    <span><i class="fa-solid fa-calendar-days"></i>&nbsp may 2, 2022</span>
+                </div>
+                <div id = "due_cat">
+                    <div><p>school</p></div>
+                </div>
+            </div>
+        </div>
+
     </div>
     
     
