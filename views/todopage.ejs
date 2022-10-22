@@ -11,15 +11,16 @@
 <body>
     <div id = "todo_box">
         <div id = "heading"><h1>TODO APP</h1></div>
+        <form action = "/create-task" method="post">
         <div id = "input_form">
-
+            
             <div id = "discription_box" >
                 <label for = "discription" class="select_option">Discription</label>
                 <input class = "select_option" type = "text" name="work" id = "discription" placeholder="What i will need to remind you?">
             </div>
             <div id = "category" class="selection">
                 <label for = "type" class="select_option">Select Category</label>
-                <select id = "type" class="select_option">
+                <select id = "type" class="select_option" name = "select_cat">
                     
                     <option>School</option>
                     <option>Home</option>
@@ -35,20 +36,22 @@
         </div>
         <div id = "input_btn">
             <button id = "addBtn" type="submit"><span><i class="fa-regular fa-plus"></i>&nbsp ADD</span></button>
-            <button id = "deleteBtn" type=""><span><i class="fa-solid fa-trash"></i>&nbsp DELETE</span></button>
+            <button id = "deleteBtn" ><span><i class="fa-solid fa-trash"></i>&nbsp DELETE</span></button>
             
         </div>
+        </form>
              
         
         <% for(let i of task){ %>
+            <% console.log(i.date)%>
         <div id = "tasks">
             <div id = "cb">
-                <input type="checkbox">
+                <input type="checkbox"  value="<%= i.id %>">
             </div>
             <div id = "due_work">
                 <div id = "due_task">
                     <p><%= i.discription %> </p>
-                    <span><i class="fa-solid fa-calendar-days"></i>&nbsp may 2, 2022</span>
+                    <span><i class="fa-solid fa-calendar-days"></i>&nbsp <%= i.date %></span>
                 </div>
                 <div id = "due_cat">
                     <div><p><%= i.category %></p></div>

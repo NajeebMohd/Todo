@@ -27,7 +27,7 @@ body{
     text-align: center;
 }
 #input_form{
-    height:30%;
+    height:60%;
     width: 100%;
     /* border:2px solid black; */
     display: flex;
@@ -55,7 +55,7 @@ body{
    
 }
 #input_btn{
-    height: 20%;
+    height: 40%;
     width: 100%;
     /* border: 1px solid black; */
     display: flex;
@@ -126,4 +126,9 @@ body{
 }
 #due_cat p{
     margin:9px;
+}
+form{
+    height: 55%;
+    width: 100%;
+    
 }
