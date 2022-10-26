@@ -4,6 +4,7 @@ const Tasks = require('../models/task');
 
 // Tasks.create({discription:'first task',category:'school'});
 
+//  -------------------- REQUEST FOR HOME --------------------------- //
 module.exports.home = function(req,res){
     console.log('home_controller is started...');
     
@@ -16,6 +17,7 @@ module.exports.home = function(req,res){
     });
 }
 
+// ----------------------- REQUEST FOR ADDING TASK ---------------------- //
 module.exports.addTask = function(req,res){
     console.log(req.body,'<<-- the req.body');    
     // return res.redirect('back');
@@ -24,24 +26,25 @@ module.exports.addTask = function(req,res){
         category: req.body.select_cat,
         date: req.body.date
     }, function(err,newTask){
-        if(err){console.log('error while creating a task in database addTask()..'); return;}
+        if(err){console.log('error while creating a task in database addTask()..',err); return;}
         console.log('task added sucessfully',newTask);
         return;
     });
     return res.redirect('back');    
 }
 
-
+// --------------------------- REQUEST FOR DELETING TASKS ---------------------//
 module.exports.deleteTask = function(req,res){
-    var checkbox = req.query.checkbox;
-    for(let i = 0; i < checkbox.length; i++){
-        console.log(checkbox[i],'seperate check box');
-        // if(checkbox[i].checked == true){
-        //     Tasks.findByIdAndDelete(checkbox[i].value,function(err){
-        //         if(err){console.log('error in deleting the database deleteTask()'); return;}
-        //         return;
-        //     });
-        // }
-    }
+    var checkbox = req.query.checkbox+',';
+    
+    var count = 25;
+    while(count <= checkbox.length){
+        var id = checkbox.slice(count-25,count).slice(0,-1);
+        Tasks.findByIdAndDelete(id,function(err){
+            if(err){console.log('error in deleting the tasks deleteTask()'); return;}
+            return;
+        });
+        count+=25;
+    }    
     res.redirect('back');
 }

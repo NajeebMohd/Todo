@@ -15,28 +15,30 @@
         <div id = "input_form">
             
             <div id = "discription_box" >
-                <label for = "discription" class="select_option">Discription</label>
+                <label for = "discription" class="select_option fontadj" >Discription</label>
                 <input class = "select_option" type = "text" name="work" id = "discription" placeholder="What i will need to remind you?">
             </div>
-            <div id = "category" class="selection">
-                <label for = "type" class="select_option">Select Category</label>
+            <div id = "category" class="selection" style="border-left: 0;">
+                <label for = "type" class="select_option fontadj">Select Category</label>
                 <select id = "type" class="select_option" name = "select_cat">
                     
                     <option>School</option>
                     <option>Home</option>
                     <option>Personol</option>
                     <option>Office</option>
+                    <option>College</option>                     
+                    <option>Training</option> 
                 </select>
                 
             </div>
-            <div id = "input_date" class="selection">
-                <label for = "due_date" class="select_option">Due date</label>
+            <div id = "input_date" class="selection" style="border-left: 0; border-right:0;">
+                <label for = "due_date" class="select_option fontadj">Due date</label>
                 <input type="date" name = "date" id = "due_date" class="select_option">
             </div>
         </div>
         <div id = "input_btn">
-            <button id = "addBtn" type="submit"><span><i class="fa-regular fa-plus"></i>&nbsp ADD</span></button>
-            <button id = "deleteBtn" ><span><i class="fa-solid fa-trash"></i>&nbsp DELETE</span></button>
+            <button id = "addBtn" type ="submit" class="styBtn" style="margin-right:5px;"><span><i class="fa-regular fa-plus"></i>&nbsp ADD TASK</span></button>
+            <button id = "deleteBtn" type ="button" class="styBtn" style="margin-left:5px;"><span><i class="fa-solid fa-trash"></i>&nbsp DELETE TASKS</span></button>
             
         </div>
         </form>
@@ -50,8 +52,8 @@
             </div>
             <div id = "due_work">
                 <div id = "due_task">
-                    <p><%= i.discription %> </p>
-                    <span><i class="fa-solid fa-calendar-days"></i>&nbsp <%= i.date %></span>
+                    <p class="fontadj"><%= i.discription %> </p>
+                    <span style="color: gray;"><i class="fa-solid fa-calendar-days"></i>&nbsp <%= i.date %></span>
                 </div>
                 <div id = "due_cat">
                     <div><p><%= i.category %></p></div>
