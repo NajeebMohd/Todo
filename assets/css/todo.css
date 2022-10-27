@@ -3,25 +3,28 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: mistyrose;
-    font-family:sans-serif;
-    
+    background-color: mistyrose;    
+    font-family:sans-serif;    
 }
 #todo_box{
     height: auto;
     min-height: 596px;   
     width: 80vh;
-    border: 2px solid black;
-    margin-top: 10vh;    
+    border: 1px solid black;
+    margin-top: 4vh;    
     background-color: white;
+    border-radius: 1rem;
     
 }
 #heading{
-    
+    background-color: #f7c12b;
     margin: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     height: 61px;
     width: 100%;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 #heading h1{
     padding-top: 10px;
@@ -150,9 +153,7 @@ form{
     border-radius: 0.4rem;
 }
 @media screen and (max-width:768px) {
-    #todo_box{
-        margin-top: 0;
-    }    
+        
     #input_btn button{        
         width: 40%;
     }

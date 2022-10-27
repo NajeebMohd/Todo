@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Tasks');
+mongoose.connect('mongodb://localhost/Tasks');//mongodb local host server
+//mongoose.connect('mongodb+srv://mohdnajeeb:mnujbksss@cluster0.dmdz8qa.mongodb.net/test');//free mongodb atlas cluster
 
 const db = mongoose.connection;
 
