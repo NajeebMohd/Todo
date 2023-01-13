@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/Tasks');//mongodb local host server
-//mongoose.connect('mongodb+srv://mohdnajeeb:mnujbksss@cluster0.dmdz8qa.mongodb.net/test');//free mongodb atlas cluster
+//mongoose.connect('mongodb://127.0.0.1/Tasks');//mongodb local host server
 
+mongoose.connect(
+    process.env.mongodburl,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+);
 const db = mongoose.connection;
 
 db.on('error',console.log.bind(console, 'error connecting on database...'));

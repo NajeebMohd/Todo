@@ -18,9 +18,7 @@ module.exports.home = function(req,res){
 }
 
 // ----------------------- REQUEST FOR ADDING TASK ---------------------- //
-module.exports.addTask = function(req,res){
-    console.log(req.body,'<<-- the req.body');    
-    // return res.redirect('back');
+module.exports.addTask = function(req,res){    
     Tasks.create({
         discription: req.body.work,
         category: req.body.select_cat,

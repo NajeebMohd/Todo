@@ -8,7 +8,7 @@ var ids = [];
 // ------------------ WHEN CLICK ADDING THE ID'S TO URL --------------- //
 deleteBtn.addEventListener('click',function(event){
     event.stopPropagation();
-    console.log('int the href...');
+    
     for(let i = 0; i < checkBox.length; i++){
         if(checkBox[i].checked == true){
             ids.push(checkBox[i].value);
